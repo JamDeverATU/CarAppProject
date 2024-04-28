@@ -9,7 +9,8 @@
         Title="MainMenu" Height="500" Width="900"
         WindowStyle="None" 
         ResizeMode="NoResize"
-        Background="#181735">
+        Background="#181735"
+        WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
@@ -25,12 +26,27 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Foreground="White"
-                   FontSize="22" Width="164"><Run Language="en-gb" Text="JamDeversAutos"/>
-        </TextBlock>
+
+        <Grid Background="#0f0f2d"
+      Grid.ColumnSpan="2"
+      MouseDown="Grid_MouseDown">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="JamDeversAutos"
+               Foreground="White"
+               Grid.Column="0"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               FontWeight="Medium" Margin="4,0,0,0" />
+
+        </Grid>
+
+
 
         <StackPanel Grid.Row="1">
 
@@ -50,6 +66,8 @@
                          Command="{Binding Car1ViewCommand}"/>
 
         </StackPanel>
+
+
 
         <StackPanel Grid.Row="1"
                             Orientation="Horizontal"
@@ -74,6 +92,8 @@
 
         </StackPanel>
 
+        <Button Content="Back To Main Menu?" Click="Button_Click" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Margin="0,348,0,67" Grid.Row="1" FontWeight="Bold"/>
+
         <TextBox Width="250"
                    Height="30"
                    VerticalAlignment="Center"
@@ -89,6 +109,7 @@
                         Content="{Binding CurrentView}"/>
 
 
+
         <Grid
               Grid.RowSpan="2"
               Margin="224,-31,-224,-249"
@@ -101,6 +122,8 @@
 
             <StackPanel Orientation="Horizontal"
                         Margin="-506,-104,-99,-396">
+
+
 
                 <StackPanel>
                     <Border Width="700"

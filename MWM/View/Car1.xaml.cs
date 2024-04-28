@@ -44,7 +44,9 @@ namespace Project.MWM.View
         {
             Message newWindow = new Message();
             newWindow.Show();
+            
 
         }
+
     }
 }

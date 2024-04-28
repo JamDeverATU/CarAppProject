@@ -8,7 +8,8 @@
         Title="Message" Height="500" Width="900"
         WindowStyle="None" 
         ResizeMode="NoResize"
-        Background="#181735">
+        Background="#181735"
+        WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <viewmodel1:ContactViewModel/>
     </Window.DataContext>
@@ -29,14 +30,14 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Orientation="Horizontal" Margin="70,-84,-175,-61" Grid.RowSpan="2" Grid.Column="1">
+            <StackPanel Orientation="Horizontal" Margin="186,-194,-273,-110" Grid.RowSpan="2" Grid.Column="1">
                 <StackPanel.RenderTransform>
                     <RotateTransform Angle="40"/>
                 </StackPanel.RenderTransform>
 
-                <StackPanel>
+                <StackPanel Width="821" Height="644">
                     <Border Width="700" Height="35" Background="#3dddc2" Margin="150,0,0,0" CornerRadius="20"/>
-                    <Border Width="700" Height="35" Background="#fc6586" Margin="0,15,0,0" CornerRadius="20"/>
+                    <Border Width="794" Height="35" Background="#fc6586" Margin="0,15,0,0" CornerRadius="20"/>
                     <Border Width="700" Height="35" Background="#383660" Margin="75,15,0,0" CornerRadius="20"/>
                 </StackPanel>
                 <StackPanel>
@@ -90,8 +91,7 @@
             </Border>
 
 
-            <Grid Background="#2f3136"
-                  Grid.Row="1">
+            <Grid Background="#2f3136" Height="500" VerticalAlignment="Top" Grid.RowSpan="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition/>
@@ -111,9 +111,9 @@
                           Grid.Row="1"
                           ItemContainerStyle="{StaticResource ContactCard}"/>
 
-                <StackPanel Grid.Row="2"
+                <StackPanel Grid.Row="1"
                             Orientation="Horizontal"
-                            Background="#FF2B292F">
+                            Background="#FF2B292F" Margin="0,381,0,0" Grid.RowSpan="2">
 
                     <Border CornerRadius="25"
                             Width="30" Height="30"
@@ -150,7 +150,7 @@
                     <Grid HorizontalAlignment="Stretch"
                           Margin="8">
 
-                        <Label Content="@Username"
+                        <Label Content="@GTR-Owner"
                                Foreground="White"
                                FontWeight="Bold"
                                Margin="5,0,5,0"
@@ -171,32 +171,6 @@
 
                     </Grid>
                 </Border>
-
-                <Button Content="Back to Main Menu"
-                        Click="Buttonhome_Click"
-                        HorizontalAlignment="Left"
-                        VerticalAlignment="Top"
-                        Width="173"
-                        Height="31"
-                        Background="#3dddc2"
-                        BorderBrush="Transparent"
-                        Foreground="White"
-                        BorderThickness="0"
-                        FontSize="16"
-                        Margin="-187,324,0,0"
-                        Grid.Row="1">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="10"
-                    Background="{TemplateBinding Background}"
-                    BorderBrush="{TemplateBinding BorderBrush}"
-                    BorderThickness="{TemplateBinding BorderThickness}">
-                                <ContentPresenter HorizontalAlignment="Center"
-                                  VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
 
                 <ListView ItemsSource="{Binding SelectedContact.Messages}"
                           Background="Transparent"

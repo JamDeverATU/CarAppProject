@@ -1,0 +1,165 @@
+﻿<Window x:Class="Project.Filter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project"
+        mc:Ignorable="d"
+        Title="Filter" Height="500" Width="900"
+        WindowStyle="None" 
+        ResizeMode="NoResize"
+        Background="#181735"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+
+        <StackPanel Orientation="Horizontal"
+                        Margin="-379,138,-403,-81" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.087"/>
+                    <RotateTransform Angle="44.023"/>
+                    <TranslateTransform X="0.562" Y="-0.974"/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <StackPanel Height="476" Width="836" RenderTransformOrigin="0.5,0.5">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.431"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+                <Border Width="673"
+                            Height="38"
+                            Background="#3dddc2"
+                            Margin="150,0,0,0"
+                            CornerRadius="20"/>
+
+                <Border Width="700"
+                            Height="35"
+                            Background="#fc6586"
+                            Margin="0,15,0,0"
+                            CornerRadius="20"/>
+
+                <Border Width="700"
+                            Height="35"
+                            Background="#383660"
+                            Margin="75,15,0,0"
+                            CornerRadius="20"/>
+            </StackPanel>
+            <StackPanel Height="429" Width="829" RenderTransformOrigin="0.5,0.5">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.877"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+                <Border Width="700"
+                            Height="35"
+                            Background="#3dddc2"
+                            Margin="150,0,0,0"
+                            CornerRadius="20"/>
+
+                <Border Width="700"
+                            Height="35"
+                            Background="#fc6586"
+                            Margin="0,15,0,0"
+                            CornerRadius="20"/>
+
+                <Border Width="700"
+                            Height="35"
+                            Background="#383660"
+                            Margin="75,15,0,0"
+                            CornerRadius="20"/>
+            </StackPanel>
+
+        </StackPanel>
+
+
+        <Grid Background="#0f0f2d" Margin="0,0,0,454" Grid.RowSpan="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="JamDeversAutos"
+         Foreground="White"
+         Grid.Column="0"
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center"
+         FontWeight="Medium" Margin="4,0,0,0" />
+
+        </Grid>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10,46,16,421"  Grid.RowSpan="2">
+            <TextBox x:Name="SearchBox" Width="200" Margin="5" TextChanged="SearchBox_TextChanged" />
+            <ComboBox x:Name="MakeFilterComboBox" Width="97" Margin="5" SelectionChanged="MakeFilterComboBox_SelectionChanged">
+                <ComboBoxItem>All</ComboBoxItem>
+            </ComboBox>
+            <ComboBox x:Name="ModelFilterComboBox" Width="102" Margin="5" SelectionChanged="ModelFilterComboBox_SelectionChanged">
+                <ComboBoxItem>All</ComboBoxItem>
+            </ComboBox>
+            <ComboBox x:Name="YearFilterComboBox" Width="102" Margin="5" SelectionChanged="YearFilterComboBox_SelectionChanged">
+                <ComboBoxItem>All</ComboBoxItem>
+            </ComboBox>
+            <ComboBox x:Name="TransmissionFilterComboBox" Width="108" Margin="5" SelectionChanged="TransmissionFilterComboBox_SelectionChanged">
+                <ComboBoxItem>All</ComboBoxItem>
+            </ComboBox>
+            <ComboBox x:Name="ColorFilterComboBox" Width="106" Margin="5" SelectionChanged="ColorFilterComboBox_SelectionChanged">
+                <ComboBoxItem>All</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <Button Content="Return?" Click="Button_Click" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Margin="780,45,0,422" Grid.Row="1">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF4C70"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#FE6584"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="FontWeight" Value="Medium"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <ListView x:Name="CarListView" Grid.Row="1" Margin="10,84,16,10" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Make" DisplayMemberBinding="{Binding Make}" Width="150" />
+                    <GridViewColumn Header="Model" DisplayMemberBinding="{Binding Model}" Width="150" />
+                    <GridViewColumn Header="Year" DisplayMemberBinding="{Binding Year}" Width="100" />
+                    <GridViewColumn Header="Transmission" DisplayMemberBinding="{Binding Transmission}" Width="100" />
+                    <GridViewColumn Header="Color" DisplayMemberBinding="{Binding Color}" Width="100" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
+

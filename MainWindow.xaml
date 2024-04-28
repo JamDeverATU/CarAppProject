@@ -8,7 +8,9 @@
         Title="MainWindow" Height="500" Width="900"
         WindowStyle="None" 
         ResizeMode="NoResize"
-        Background="#181735">
+        Background="#181735"
+        WindowStartupLocation="CenterScreen">
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -22,7 +24,7 @@
 
         <Grid Background="#0f0f2d"
               Grid.ColumnSpan="2"
-              MouseDown="Grid_MouseDown">
+              MouseDown="Grid_MouseDown" Margin="0,0,0,446" Grid.RowSpan="2">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -92,6 +94,9 @@
                             <Setter Property="Cursor" Value="Hand"/>
                         </Style>
                     </Button.Style>
+                </Button>
+
+                <Button Content="Looking For Your Dream Car?" Click="Button_Click" Width="187" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" FontWeight="Bold">
                 </Button>
             </StackPanel>
         </StackPanel>

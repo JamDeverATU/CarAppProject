@@ -82,6 +82,8 @@
 
             <StackPanel Orientation="Horizontal" Height="581" Width="963">
                 <Border Width="150" Height="150" Background="#844eff" HorizontalAlignment="Left" CornerRadius="10"/>
+                <Image Width="152" Height="88" Source="/Images/speed.png" VerticalAlignment="Bottom"  Margin="-180,0,-23,265"/>
+
 
 
                 <Border Width="150" Height="150" Background="#4299ff" CornerRadius="10"/>

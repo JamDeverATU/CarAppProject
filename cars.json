@@ -1,0 +1,143 @@
+[
+  {
+    "Make": "Toyota",
+    "Model": "Camry",
+    "Year": 2021,
+    "Transmission": "Automatic",
+    "Color": "Silver"
+  },
+  {
+    "Make": "Honda",
+    "Model": "Civic",
+    "Year": 2020,
+    "Transmission": "Manual",
+    "Color": "Red"
+  },
+  {
+    "Make": "Ford",
+    "Model": "Mustang",
+    "Year": 2019,
+    "Transmission": "Manual",
+    "Color": "Blue"
+  },
+  {
+    "Make": "Chevrolet",
+    "Model": "Silverado",
+    "Year": 2022,
+    "Transmission": "Automatic",
+    "Color": "Black"
+  },
+  {
+    "Make": "BMW",
+    "Model": "X5",
+    "Year": 2020,
+    "Transmission": "Automatic",
+    "Color": "White"
+  },
+  {
+    "Make": "Audi",
+    "Model": "A4",
+    "Year": 2021,
+    "Transmission": "Automatic",
+    "Color": "Gray"
+  },
+  {
+    "Make": "Tesla",
+    "Model": "Model 3",
+    "Year": 2023,
+    "Transmission": "Automatic",
+    "Color": "Red"
+  },
+  {
+    "Make": "Mercedes-Benz",
+    "Model": "E-Class",
+    "Year": 2020,
+    "Transmission": "Automatic",
+    "Color": "Black"
+  },
+  {
+    "Make": "Jeep",
+    "Model": "Wrangler",
+    "Year": 2022,
+    "Transmission": "Manual",
+    "Color": "Green"
+  },
+  {
+    "Make": "Lamborghini",
+    "Model": "Aventador",
+    "Year": 2021,
+    "Transmission": "Automatic",
+    "Color": "Yellow"
+  },
+  {
+    "Make": "Subaru",
+    "Model": "Outback",
+    "Year": 2020,
+    "Transmission": "Automatic",
+    "Color": "Blue"
+  },
+  {
+    "Make": "Porsche",
+    "Model": "911",
+    "Year": 2022,
+    "Transmission": "Manual",
+    "Color": "Silver"
+  },
+  {
+    "Make": "Nissan",
+    "Model": "Altima",
+    "Year": 2021,
+    "Transmission": "Automatic",
+    "Color": "Gray"
+  },
+  {
+    "Make": "Mazda",
+    "Model": "CX-5",
+    "Year": 2020,
+    "Transmission": "Automatic",
+    "Color": "White"
+  },
+  {
+    "Make": "Kia",
+    "Model": "Seltos",
+    "Year": 2023,
+    "Transmission": "Automatic",
+    "Color": "Orange"
+  },
+  {
+    "Make": "Hyundai",
+    "Model": "Elantra",
+    "Year": 2022,
+    "Transmission": "Automatic",
+    "Color": "Blue"
+  },
+  {
+    "Make": "GMC",
+    "Model": "Yukon",
+    "Year": 2021,
+    "Transmission": "Automatic",
+    "Color": "Black"
+  },
+  {
+    "Make": "Dodge",
+    "Model": "Challenger",
+    "Year": 2020,
+    "Transmission": "Manual",
+    "Color": "Red"
+  },
+  {
+    "Make": "Chrysler",
+    "Model": "Pacifica",
+    "Year": 2023,
+    "Transmission": "Automatic",
+    "Color": "Silver"
+  },
+  {
+    "Make": "Buick",
+    "Model": "Enclave",
+    "Year": 2021,
+    "Transmission": "Automatic",
+    "Color": "White"
+  }
+ 
+]

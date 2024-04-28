@@ -1,16 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Project
 {
@@ -23,6 +13,7 @@ namespace Project
         {
             InitializeComponent();
         }
+
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             try
@@ -40,33 +31,59 @@ namespace Project
 
         private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.MainWindow.WindowState = WindowState.Minimized;
+            try
+            {
+                Application.Current.MainWindow.WindowState = WindowState.Minimized;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while minimizing the window: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
-
-
 
         private void WindowStateButton_Click(object sender, RoutedEventArgs e)
         {
-            if (Application.Current.MainWindow.WindowState == WindowState.Maximized)
+            try
             {
-                Application.Current.MainWindow.WindowState = WindowState.Normal;
+                if (Application.Current.MainWindow.WindowState == WindowState.Maximized)
+                {
+                    Application.Current.MainWindow.WindowState = WindowState.Normal;
+                }
+                else
+                {
+                    Application.Current.MainWindow.WindowState = WindowState.Maximized;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                Application.Current.MainWindow.WindowState = WindowState.Maximized;
+                MessageBox.Show($"An error occurred while changing window state: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while closing the window: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void Buttonhome_Click(object sender, RoutedEventArgs e)
         {
-            MainMenu newWindow = new MainMenu();
-            newWindow.Show();
+            try
+            {
+                MainMenu newWindow = new MainMenu();
+                newWindow.Show();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while opening the main menu: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
