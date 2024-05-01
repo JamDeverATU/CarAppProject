@@ -10,7 +10,7 @@
         ResizeMode="NoResize"
         Background="#181735"
         WindowStartupLocation="CenterScreen">
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -96,8 +96,34 @@
                     </Button.Style>
                 </Button>
 
-                <Button Content="Looking For Your Dream Car?" Click="Button_Click" Width="187" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" FontWeight="Bold">
+                <Button Content="Looking For a Certain Car?" Click="Button_Click" Width="185" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" FontWeight="Bold" Height="23">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="10">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF4C70"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#FE6584"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="FontSize" Value="12"/>
+                            <Setter Property="FontWeight" Value="Medium"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Style>
+                    </Button.Style>
                 </Button>
+
+
             </StackPanel>
         </StackPanel>
 

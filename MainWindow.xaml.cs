@@ -10,6 +10,7 @@ namespace Project
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
@@ -68,5 +69,7 @@ namespace Project
             }
 
         }
+
+        
     }
 }

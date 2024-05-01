@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:Project"
              xmlns:viewModel="clr-namespace:Project.MWM.ViewModel"
              xmlns:view="clr-namespace:Project.MWM.View"
-             StartupUri="MainWindow.xaml">
+             StartupUri="LoginForm.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

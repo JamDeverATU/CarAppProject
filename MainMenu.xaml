@@ -92,7 +92,30 @@
 
         </StackPanel>
 
-        <Button Content="Back To Main Menu?" Click="Button_Click" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Margin="0,348,0,67" Grid.Row="1" FontWeight="Bold"/>
+        <Button Content="Back To Main Menu?" Click="Button_Click" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Margin="0,348,0,67" Grid.Row="1" FontWeight="Bold">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#FE6584"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="FontWeight" Value="Medium"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF4C70"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
 
         <TextBox Width="250"
                    Height="30"
